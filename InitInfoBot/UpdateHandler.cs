@@ -130,7 +130,7 @@ public class UpdateHandler : IUpdateHandler
         {
             try
             {
-                await _botClient.LeaveChatAsync(chat.Id);
+                await _botClient.LeaveChat(chat.Id);
                 await _dbService.RemoveChatAsync(chat.Id);
                 successCount++;
                 await Task.Delay(300); // Add a small delay to avoid hitting API rate limits
